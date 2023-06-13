@@ -1,8 +1,24 @@
 # test_task
+How to run?
 
-Create directory data/airbus-ship-detection. Here should be stored the data the same way as dataset in kaggle.
+1. Create directory data/airbus-ship-detection. Here should be stored the data the same way as dataset in kaggle.
 
-Contains
+2. Set current path to test_task
+
+3. Run preprocess.py
+
+4. train.py
+
+5. inference.py
+
+
+
+
+
+
+
+
+Contains:
 
 data_processing:
 
@@ -24,6 +40,10 @@ test_jupiter.ipynb - basic version of eda
 test_tensorflow.py - test if tensorflow installed and gpu enabled
 
 Accuracy: app. 69%
+
+
+
+
 
 Possible improvements:
   * add data augmentation 

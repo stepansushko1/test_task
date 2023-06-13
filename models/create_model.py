@@ -4,22 +4,6 @@ from tensorflow.keras import Model, Input, Sequential
 from tensorflow.keras.layers import UpSampling2D,Conv2D,BatchNormalization,MaxPool2D,ReLU,AveragePooling2D
 from tensorflow.keras.layers import concatenate
 
-def _get_skip_connections(model):
-    """
-    Returns a list of a layers, which outputs need to be forwarded to decoder
-    """
-    # add input layer and first activation
-    skip_connections = [
-        model.get_layer('tf.nn.bias_add'), model.get_layer('conv1_relu')
-    ]
-    for i, layer in enumerate(model.layers[:-1]):
-        if layer.name.endswith('_out'):
-            next_layer = model.layers[i + 1]
-            if next_layer.input_shape[1] != next_layer.output_shape[1]:
-                skip_connections.append(layer)
-    return skip_connections
-
-
 def add_upsample(model, previous_layer, encoder_layer):
 
     prev_activations = previous_layer.output

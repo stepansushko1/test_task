@@ -5,17 +5,11 @@ How to run?
 
 2. Set current path to test_task
 
-3. Run preprocess.py
+3. Run <code> python preprocess.py </code>
 
-4. train.py
+4. Run <code> train.py </code>
 
-5. inference.py
-
-
-
-
-
-
+5. Run <code> inference.py </code>
 
 
 Contains:
@@ -35,15 +29,11 @@ models:
 * train.py - for training model
 * weights_unet.h5 - trained model
 
-test_jupiter.ipynb - basic version of eda
+eda.ipynb - data investigation + visualisation + showing results on test imgs
 
 test_tensorflow.py - test if tensorflow installed and gpu enabled
 
 Accuracy: app. 69%
-
-
-
-
 
 Possible improvements:
   * add data augmentation 

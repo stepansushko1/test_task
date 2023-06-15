@@ -1,6 +1,10 @@
 # test_task
 How to run?
 
+Note! Some packages in requirements.txt are for MacOS!
+
+Create conda env <code> conda activate tensorflow </code>
+
 1. Create directory data/airbus-ship-detection. Here should be stored the data the same way as dataset in kaggle.
 
 2. Set current path to test_task
